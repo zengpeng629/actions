@@ -14,9 +14,9 @@ import { prepareTransaction } from '../../shared/transaction-utils';
 import { ActionGetResponse, ActionPostRequest, ActionPostResponse } from '@solana/actions';
 
 const DONATION_DESTINATION_WALLET =
-  '3h4AtoLTh3bWwaLhdtgQtcC3a3Tokb8NJbtqR9rhp7p6';
-const DONATION_AMOUNT_SOL_OPTIONS = [1, 5, 10];
-const DEFAULT_DONATION_AMOUNT_SOL = 1;
+  '7MLFbwyJsGeFMzw8r6j52AYfkwX8MrhSyyjw22PdkxCg';
+const DONATION_AMOUNT_SOL_OPTIONS = [0.01, 0.05, 0.1];
+const DEFAULT_DONATION_AMOUNT_SOL = 0.01;
 
 const app = new OpenAPIHono();
 
@@ -138,10 +138,10 @@ function getDonateInfo(): Pick<
   'icon' | 'title' | 'description'
 > {
   const icon =
-    'https://ucarecdn.com/7aa46c85-08a4-4bc7-9376-88ec48bb1f43/-/preview/880x864/-/quality/smart/-/format/auto/';
-  const title = 'Donate to Alice';
+    'https://ucarecdn.com/ac6188ee-dccf-44fb-9e86-405a6f0f525a/1TTw26U.jpeg';
+  const title = 'Donate to zengp';
   const description =
-    'Cybersecurity Enthusiast | Support my research with a donation.';
+    'Create Blink for you | Cybersecurity Enthusiast | Support my research with a donation.';
   return { icon, title, description };
 }
 async function prepareDonateTransaction(
